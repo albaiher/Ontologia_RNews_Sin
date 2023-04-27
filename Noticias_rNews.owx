@@ -1,0 +1,2627 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://iptc.org/std/rNews/2011-10-07#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://iptc.org/std/rNews/2011-10-07#">
+    <Prefix name="" IRI="http://www.semanticweb.org/owl/owlapi/turtle#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="rNews" IRI="http://iptc.org/std/rNews/2011-10-07#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">The IPTC rNews Ontology (draft 3, @agebhard, June 9, 2012)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AudioObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="GeoCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ImageObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NewsItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PostalAddress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UserComment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VideoObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="about"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="accountablePerson"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="address"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="associatedArticle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="associatedMedia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="comment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="contributor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="copyrightHolder"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="creator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="discusses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="editor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="geoCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="mentions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="provider"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="sourceOrganization"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="additionalName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="addressCountry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="addressLocality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="addressRegion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="alternativeHeadline"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="articleBody"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="articleSection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="box"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="circle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="commentText"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="commentTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="copyrightNotice"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="copyrightYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dateCreated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dateModified"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="datePublished"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dateline"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="discussionUrl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="duration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="elevation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="encodingFormat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="familyName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="faxNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="featureCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="genre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="givenName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="headline"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="height"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="honorificPrefix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="honorificSuffix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="identifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="inLanguage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="interactionCount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="line"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="point"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="polygon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="postOfficeBoxNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="postalCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="printColumn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="printEdition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="printPage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="printSection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="publishingPrinciples"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="replyToUrl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="streetAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="telephone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="thumbnailUrl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="tickerSymbol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="transcript"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="usageTerms"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="version"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="width"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="wordCount"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Abraham_Pérez"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="España"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Img_1_Noticia_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Img_2_Noticia_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Img_Noticia_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Img_Noticia_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Img_Noticia_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Img_Noticia_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Italia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Levante_EMV"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Madrid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Noticia_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Noticia_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Noticia_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Noticia_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Noticia_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Pilar_Santos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Semillas_de__CaoCao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Sirio_Sesenra"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Valencia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="20minutos"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:duration"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Article"/>
+        <Class IRI="NewsItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AudioObject"/>
+        <Class IRI="NewsItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Concept"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="GeoCoordinates"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ImageObject"/>
+        <Class IRI="NewsItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NewsItem"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Organization"/>
+        <Class IRI="Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Person"/>
+        <Class IRI="Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <Class IRI="Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PostalAddress"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UserComment"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VideoObject"/>
+        <Class IRI="NewsItem"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="AudioObject"/>
+        <Class IRI="ImageObject"/>
+        <Class IRI="VideoObject"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Organization"/>
+        <Class IRI="Person"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="Person"/>
+        <NamedIndividual IRI="Abraham_Pérez"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Place"/>
+        <NamedIndividual IRI="España"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ImageObject"/>
+        <NamedIndividual IRI="Img_1_Noticia_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ImageObject"/>
+        <NamedIndividual IRI="Img_2_Noticia_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ImageObject"/>
+        <NamedIndividual IRI="Img_Noticia_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ImageObject"/>
+        <NamedIndividual IRI="Img_Noticia_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ImageObject"/>
+        <NamedIndividual IRI="Img_Noticia_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ImageObject"/>
+        <NamedIndividual IRI="Img_Noticia_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Place"/>
+        <NamedIndividual IRI="Italia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Organization"/>
+        <NamedIndividual IRI="Levante_EMV"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Place"/>
+        <NamedIndividual IRI="Madrid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Article"/>
+        <NamedIndividual IRI="Noticia_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Article"/>
+        <NamedIndividual IRI="Noticia_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Article"/>
+        <NamedIndividual IRI="Noticia_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Article"/>
+        <NamedIndividual IRI="Noticia_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Article"/>
+        <NamedIndividual IRI="Noticia_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Person"/>
+        <NamedIndividual IRI="Pilar_Santos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Organization"/>
+        <NamedIndividual IRI="Semillas_de__CaoCao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Person"/>
+        <NamedIndividual IRI="Sirio_Sesenra"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Place"/>
+        <NamedIndividual IRI="Valencia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VideoObject"/>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Organization"/>
+        <NamedIndividual IRI="20minutos"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedArticle"/>
+        <NamedIndividual IRI="Img_1_Noticia_1"/>
+        <NamedIndividual IRI="Noticia_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedArticle"/>
+        <NamedIndividual IRI="Img_2_Noticia_1"/>
+        <NamedIndividual IRI="Noticia_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedArticle"/>
+        <NamedIndividual IRI="Img_Noticia_2"/>
+        <NamedIndividual IRI="Noticia_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedArticle"/>
+        <NamedIndividual IRI="Img_Noticia_3"/>
+        <NamedIndividual IRI="Noticia_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedArticle"/>
+        <NamedIndividual IRI="Img_Noticia_4"/>
+        <NamedIndividual IRI="Noticia_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedArticle"/>
+        <NamedIndividual IRI="Img_Noticia_5"/>
+        <NamedIndividual IRI="Noticia_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedMedia"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <NamedIndividual IRI="Img_1_Noticia_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedMedia"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <NamedIndividual IRI="Img_2_Noticia_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="creator"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <NamedIndividual IRI="Sirio_Sesenra"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="provider"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <NamedIndividual IRI="Semillas_de__CaoCao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedMedia"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <NamedIndividual IRI="Img_Noticia_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="creator"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <NamedIndividual IRI="Pilar_Santos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="mentions"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <NamedIndividual IRI="Madrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sourceOrganization"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <NamedIndividual IRI="Levante_EMV"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedMedia"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <NamedIndividual IRI="Img_Noticia_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedMedia"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="creator"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <NamedIndividual IRI="Abraham_Pérez"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="mentions"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <NamedIndividual IRI="Valencia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sourceOrganization"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <NamedIndividual IRI="Levante_EMV"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedMedia"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <NamedIndividual IRI="Img_Noticia_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="editor"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <NamedIndividual IRI="20minutos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="mentions"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <NamedIndividual IRI="Italia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sourceOrganization"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <NamedIndividual IRI="20minutos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedMedia"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <NamedIndividual IRI="Img_Noticia_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="editor"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <NamedIndividual IRI="20minutos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="mentions"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <NamedIndividual IRI="España"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sourceOrganization"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <NamedIndividual IRI="20minutos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="associatedArticle"/>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+        <NamedIndividual IRI="Noticia_3"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="familyName"/>
+        <NamedIndividual IRI="Abraham_Pérez"/>
+        <Literal>Pérez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="givenName"/>
+        <NamedIndividual IRI="Abraham_Pérez"/>
+        <Literal>Abraham</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="height"/>
+        <NamedIndividual IRI="Img_1_Noticia_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">478</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Img_1_Noticia_1"/>
+        <Literal>https://4.bp.blogspot.com/-GFvWBFYaUyo/VLvs7CFYK7I/AAAAAAAAAdE/qKMpd1l1i5ITcntgzi8mbVubb4QhjX1LACPcB/s1600/P1010801.JPG</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="width"/>
+        <NamedIndividual IRI="Img_1_Noticia_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">640</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="height"/>
+        <NamedIndividual IRI="Img_2_Noticia_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">348</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Img_2_Noticia_1"/>
+        <Literal>https://2.bp.blogspot.com/-z3oJ-hkgxLw/WKSsH-tMbOI/AAAAAAAAPu4/zLJtXCpUxD4B8zjBvDOC1dVO3T9kq4PawCLcB/s640/giphy.gif</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="width"/>
+        <NamedIndividual IRI="Img_2_Noticia_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">640</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="description"/>
+        <NamedIndividual IRI="Img_Noticia_2"/>
+        <Literal>El rey emérito, a su llegada a Vitoria.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="height"/>
+        <NamedIndividual IRI="Img_Noticia_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">675</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Img_Noticia_2"/>
+        <Literal>https://estaticos-cdn.prensaiberica.es/clip/6a976c54-7d15-488b-ae65-df5d8c51afb8_16-9-discover-aspect-ratio_default_0.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="width"/>
+        <NamedIndividual IRI="Img_Noticia_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="description"/>
+        <NamedIndividual IRI="Img_Noticia_3"/>
+        <Literal>Las playas de València abarrotadas ayer por las altas temperaturas que está dejando la ola de calor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="height"/>
+        <NamedIndividual IRI="Img_Noticia_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">649</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Img_Noticia_3"/>
+        <Literal>https://estaticos-cdn.prensaiberica.es/clip/8457e128-f839-4e6d-bd35-95b2f06e7c0b_16-9-discover-aspect-ratio_default_0.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="width"/>
+        <NamedIndividual IRI="Img_Noticia_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1154</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="description"/>
+        <NamedIndividual IRI="Img_Noticia_4"/>
+        <Literal>Imagen de archivo de la policía italiana</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="height"/>
+        <NamedIndividual IRI="Img_Noticia_4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">556</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Img_Noticia_4"/>
+        <Literal>https://imagenes.20minutos.es/files/image_990_v3/uploads/imagenes/2022/03/30/imagen-de-archivo-de-la-policia-italiana.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="width"/>
+        <NamedIndividual IRI="Img_Noticia_4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">990</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="description"/>
+        <NamedIndividual IRI="Img_Noticia_5"/>
+        <Literal>El ministro de Consumo, Alberto Garzón</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="height"/>
+        <NamedIndividual IRI="Img_Noticia_5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">556</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Img_Noticia_5"/>
+        <Literal>https://imagenes.20minutos.es/files/image_990_v3/uploads/imagenes/2023/04/27/el-ministro-de-consumo-alberto-garzon.jpeg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="width"/>
+        <NamedIndividual IRI="Img_Noticia_5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">990</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="point"/>
+        <NamedIndividual IRI="Levante_EMV"/>
+        <Literal>Levante El Mercantil Valenciano</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleBody"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <Literal>Sin duda una de las cosas que hace de personajes como William Wallace una entidad con carga propia en la película, son sus discursos. Ya sabéis:  
+
+&quot;Luchad y puede que muráis. Huid y viviréis. Un tiempo al menos. Y al morir en vuestro lecho, dentro de muchos años, ¿no estaréis dispuestos a cambiar todos los días desde hoy, por una oportunidad, solo una oportunidad de volver aquí a matar a nuestros enemigos? Pueden que nos quiten la vida, pero jamás nos quitarán ¡la libertad!&quot;
+
+
+Esa clase de prédicas para arengar a las tropas, que parecen salidas de lo más profundo de las entrañas de quien los emite, son verdaderamente difíciles de emular en nuestras partidas de rol.
+
+Y no solo ellos, estos son solo los cabeza de familia de toda una dinastía de momentos difíciles para la improvisación:
+
+Cuando el malo revela su plan. 
+Cuando se destapa finalmente la traición.
+Cuando el atormentado explica sus porqués. 
+Cuando el loco se manifiesta ante los protagonistas.
+Cuando el tabernero advierte a los personajes de dónde se van a meter.
+Cuando te toca describir al Pnj clave.
+Cuando quieres impactar con la grandeza de la ciudad en una vista panorámica.
+Cuando las emociones tienen que salir a palestra a tocar los corazoncitos de los Pn a través de tu interpretación de un PNJ .
+
+En definitiva, cuando queremos que las palabras de un PNJ impacten de verdad a nuestros jugadores y a sus personajes o cuando queremos que las nuestras sean fieles a lo que queremos describir.
+
+Considerando que nuestros jugadores posiblemente ya estén vacunados contra todo el repertorio de trucos de nuestro zurrón de director, una de nuestra mejores bazas es tirar por el camino de la fluidez y la práctica.
+
+Personalmente, cuando tengo por delante una escena que se que en la partida va a aportar algo clave o en la que no tengo claro el &quot;color&quot; de la escena, lo que hago es dirigírsela al vacío (que es una forma muy chula de decir que hablo solo). Describirle a la nada una ciudad me hace imaginarla mejor, obtener detalles, considerar cuestiones que se que en mitad de la partida se me pueden escapar o que ni consideraría, cosa que en definitiva enriquece el universo de juego.
+
+Si se que tengo un personaje especialmente delicado de interpretar, por su discurso, por sus gestos o por su mensaje, lo que hago antes de meterlo en partida es ensayarlo a solas. Extraerle el sabor al personaje para poder invocarlo con facilidad en la partida y que pueda aumentar la sensación de realismo hasta donde me permitan mis capacidades.
+
+Claramente esto no es teatro, ni se pretende. Pero rechazar los beneficios de principios tan simples como estos sería una pena considerando lo mucho que nos pueden aportar en partida. Si con nuestros ensayos de descripciones conseguimos transmitir muchas cosas en pocas palabras, estaremos mejorando el color y el ritmo de la partida; si transmitimos la sensación de que &quot;lo vemos&quot;, facilitaremos que otros &quot;lo vean&quot; y la inmersión del grupo de juego aumentará.
+
+ Entonces... ¿qué puedo hacer para mejorar mis registros?
+
+Simplemente ensayar los momentos o personajes que sabes que serán clave de tu partida.
+
+Si disfrutas con partidas de libertad total, practica las descripciones de los paisajes y las escenas que sabes que estarán ahí, y la forma de hablar de los personajes que sin duda los Pj encontrarán tarde o temprano.
+
+Si tus partidas tienen una trama específica prediseñada con Pnj clave que participarán en escenas importantes, ensaya sus discursos.
+
+Sea como fuere, creo que es importante considerar una cosa: que el ensayo no haga a las escenas inamovibles u obligatorias. Sino estaremos subyugando a las partidas a las escenas que hemos predefinido. Por eso creo que, por ejemplo, redactar y leer una y otra vez no es una buena costumbre para realizar este truco. En absoluto, tan solo que interpretes al personaje a tu aire, en soledad, intentando que fluya mientras estás delante de unos Pj imaginarios, o describiendo una ciudad de tu mundo o partida a unos jugadores imaginarios.
+
+En soledad encontraremos recursos narrativos que, una vez naturalizados, podremos llevar a la mesa con mucha efectividad.
+
+Espero que este sencillo truco de dirección os valga para algo ^^.
+
+¿Ya lo haces? ¿De qué manera? ¿Tienes alguna forma en concreto de practicar esos momentos clave de las partidas?</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleSection"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <Literal>Trucos de dirección</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="datePublished"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <Literal>jueves, 16 de febrero de 2017</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="genre"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <Literal>Artículo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="headline"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <Literal>Trucos de dirección: entrena tus registros</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="inLanguage"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <Literal>Español</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <Literal>https://semillasdecaocao.blogspot.com/2017/02/trucos-de-direccion-entrena-tus.html</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="version"/>
+        <NamedIndividual IRI="Noticia_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="alternativeHeadline"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>Según &apos;El Confidencial&apos; el padre de Felipe VI tuvo una cuarta hija fruto de una relación extramatrimonial con una aristócrata ligeramente mayor que él</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleBody"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>La Casa del Rey asegura desconocer si Juan Carlos I tiene una hija secreta llamada Alejandra. A preguntas de El Periódico de Catalunya, del grupo Prensa Ibérica, un portavoz oficial de la jefatura del Estado ha sugerido que cualquier duda sobre este asunto que revela este jueves &apos;El Confidencial&apos; se plantee directamente al rey emérito.
+
+La Zarzuela apenas informa sobre el que fue jefe de Estado 38 años desde 2019, cuando su hijo, Felipe VI, empezó a romper con él tras enterarse de que su padre tenía cuentas en paraísos fiscales. En aquel año, el Monarca decidió que su padre dejara de representar institucionalmente a la Corona. Fue el primer gesto de distanciamiento antes de que, en marzo de 2020, anunciara públicamente que renunciará a cualquier herencia que pueda tocarle cuando su padre muera.
+
+Esa frialdad entre los dos se ha vuelto a comprobar estos días, en la segunda visita a España de Juan Carlos I. El emérito no ha pasado por Madrid, para ver a la familia. Desde que vive en Abu Dabi, en agosto de 2020, solo ha ido una ver a la Zarzuela, en mayo de 2022, y después ha visto a su hijo y a su esposa en funerales (en septiembre del año pasado el de Isabel II y, este mes de enero, el de Constantino de Grecia). Y, pese a la discreción y el perfil bajo que el exjefe de Estado ha mostrado en esta ocasión, Felipe VI no ha hecho ningún gesto de acercamiento.
+
+Sin reclamar el derecho sucesorio
+
+Según &apos;El Confidencial&apos; Juan Carlos I tuvo una cuarta hija fruto de una relación extramatrimonial con una aristócrata ligeramente mayor que él. El libro de los periodistas José María Olmo y David Fernández &apos;King Corp. El imperio nunca contado de Juan Carlos I&apos; (Libros del K.O.) desvela ese dato y la web ha publicado un adelanto. Según esa información, la hija se llama Alejandra, está casada, tiene un hijo y nunca ha reclamado ningún tipo de derecho sucesorio, asunto del que la Zarzuela no ha querido responder ninguna pregunta. 
+
+En el libro se asegura que este lazo de sangre entre Alejandra y Juan Carlos I es conocido por todos los miembros de la familia real. La mujer pertenece a una familia de aristócratas bien conectada con el poder &quot;y nunca sufrió estrecheces económicas&quot;, porque el emérito también colaboró con sus propios recursos.
+
+&quot;Dar más detalles [sobre Alejandra] pondría en peligro su discreción. Quienes la han tratado creen que es una víctima colateral de las miserias de la Zarzuela. Por razones de Estado, se hizo mayor sin sentir el cariño de su verdadero padre. Pero esas razones de Estado ya no existen y la sociedad ha evolucionado, a veces, a fuerza de titulares&quot;, escriben Olmo y Fernández en la web.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleSection"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>Casa Real</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="dateModified"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>27·04·23 | Actualizado a las 13:32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="datePublished"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>27·04·23 | 11:49</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="genre"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>Noticia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="headline"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>La Zarzuela dice &quot;no tener conocimiento&quot; sobre la hija secreta y pide que se pregunte a Juan Carlos I</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="inLanguage"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>Español</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal>https://www.levante-emv.com/espana/2023/04/27/zarzuela-responde-hija-secreta-emerito-86560000.html</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="version"/>
+        <NamedIndividual IRI="Noticia_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="alternativeHeadline"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>El viernes se esperan temperaturas extremadamente cálidas que rozarán los 40 grados en algunos puntos del interior</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleBody"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>La ola de calor que está abrasando a todo el país continúa dejando temperaturas de récord para esta época del año en muchos puntos de la Comunitat Valenciana. A pesar del ligero descenso este miércoles de las máximas que alivió el bochorno sofocante vivido el martes, los termómetros continúan anotando registros muy superiores para un mes de abril. De hecho, la Agencia Estatal de Meteorología (Aemet) alerta de que, a pesar de esta tregua, lo peor está por llegar.
+
+Según Aemet, el frente de calor procedente de África alcanzará su pico máximo en los próximos días, donde se espera que el viernes las máximas rozarán los 40 grados en algunos puntos del interior de la Comunitat. Esta anomalía en las temperaturas provocada por una masa cálida de aire seco dejará registros de hasta 15 grados por encima de lo habitual para un mes de abril, según explicaba el meteorólogo Mario Picazo en su perfil de Twitter.
+
+Durante la jornada de ayer se volvieron a dar temperaturas extremadamente altas para la primavera, lo que podría dejar el que se prevé será uno de los meses de abril más calurosos de la historia. Las temperaturas se mantuvieron inferiores a los 28 grados en muchos puntos, mientras que en el litoral fueron ligeramente inferiores gracias al viento de levante y la brisa marina.
+
+Las temperaturas más altas se dieron de nuevo en las comarcas de la Costera y la Ribera Alta, con 36,6 º C en Xàtiva y Carcaixent como ya ocurrió el martes. En Villena, Pinoso y Orihuela los termómetros marcaron entre 32 y 30 grados, Novelda rozó los 30 grados y en Utiel fueron 30,1 grados los registrados, según la Aemet.
+
+A la espera de que este frente de calor procedente de África alcance sus picos máximos el próximo viernes, donde se podrían rozar los 40 grados en algunos puntos de la Comunitat, durante la jornada de ayer se volvieron a anotar temperaturas extremadamente altas para la primavera, lo que podría dejar el que se prevé será uno de los meses de abril más calurosos de la historia.
+
+Para el día de hoy Aemet prevé pocos cambios respecto al día de ayer, aunque se espera un ligero ascenso de las máximas en la provincia de Valencia. Durante la jornada se producirán cielos poco nubosos en gran parte del territorio, aunque en la mitad norte de la Comunitat podrían darse algunos intervalos de nubes medias en las horas centrales del día.
+
+Las nubes harán presencia en zonas del litoral y el prelitoral, donde no se descartan las brumas e incluso que pueda producirse algún banco de niebla. El viento soplará flojo, aunque podría aumentar ocasionalmente la intensidad en puntos del litoral central.
+
+Aviso naranja de incendio
+Aunque las temperaturas seguirán siendo significativamente altas en el interior, en las capitales de provincia se esperan un climas más suave debido a las brisas y el aire de levante, que refrescan el ambiente. Así, se esperan mínimas de 13 grados y máximas de 25, excepto en Castellón, donde podrían alcanzar los 25 grados.
+
+El nivel de alerta por riesgo de incendios continúa siendo alto en gran parte de la provincia, por lo que el Servicio de Emergencias de la Comunitat mantiene activado el aviso naranja, a excepción del litoral de Valencia y Castellón, donde se mantiene el nivel verde.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleSection"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>Temperaturas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="dateModified"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>27·04·23 | Actualizado a las 17:56</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="datePublished"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>27·04·23 | 04:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="genre"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>Noticia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="headline"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>Un horno en Valencia: Así serán las temperaturas el viernes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="inLanguage"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>Español</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal>https://www.levante-emv.com/comunitat-valenciana/2023/04/27/temperatura-subira-15-grados-habitual-86540038.html</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="version"/>
+        <NamedIndividual IRI="Noticia_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleBody"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <Literal>La Policía de Italia ha detenido este jueves a Pasquale Bonavota, un importante capo de la mafia &apos;Ndranghueta considerado de &quot;máxima peligrosidad&quot; en un operativo llevado a cabo en la ciudad de Génova, en el noroeste del país.
+
+Bonavota figuraba en la lista de busca y captura del Ministerio del Interior italiano, que lo considera uno de los jefes de la poderosa organización criminal calabresa, tal y como ha recogido el diario La Stampa.
+
+Su arresto se ha producido después de que en enero de 2022 las fuerzas de seguridad detuvieran al capo Matteo Messina, de la Cosa Nostra, en Palermo. Bonavota, por su parte, ha sido buscado como uno de los criminales más peligrosos del país.
+
+Ahora, ha sido detenido tras una larga investigación realizada por las unidades especiales de los Carabineros con la coordinación del Departamento de Lucha contra la Mafia de la provincia de Catanzaro, en Calabria, que lo acusa de numerosos delitos.
+
+Bonavota habría estado al frente de su clan dentro de la &apos;Ndrangheta desde los 16 años, edad con la que empezó a luchar contra otros grupos enfrentados dentro de la mafia calabresa, según las investigaciones.
+
+La orden de detención en su contra se emitió como resultado de una investigación que llevó a la detención de más de 300 personas por su participación en actividades delictivas relacionadas con la &apos;Ndrangheta.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleSection"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <Literal>Internacional</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="datePublished"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <Literal>27.04.2023 - 19:11H</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="genre"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <Literal>Noticia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="headline"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <Literal>Detenido en Italia Pasquale Bonavota, un capo de &quot;máxima peligrosidad&quot; de la mafia &apos;Ndragheta que estaba en busca y captura</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="inLanguage"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <Literal>Español</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <Literal>https://www.20minutos.es/noticia/5123058/0/detenido-capo-mafia-ndragheta/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="version"/>
+        <NamedIndividual IRI="Noticia_4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleBody"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <Literal>El Pleno del Congreso ha aprobado este jueves con un amplísimo respaldo la ley que regula el servicio de atención al cliente y que, entre sus medidas, limita a tres minutos la espera telefónica de la atención al cliente y regula la atención robótica. En la votación, PSOE, PP, Unidas Podemos, ERC, Bildu, PNV, Ciudadanos, Más País-Equo, Coalición Canaria, CUP, Foro Asturias, Teruel Existe y Partido Regionalista de Cantabria (PRC) han votado a favor, mientras que Vox y Junts han decidido abstenerse.
+
+La norma limita el tiempo para ser atendido telefónicamente en servicios generales de información, reclamación y postventa, una reducción de tiempos que también beneficiará a las personas afectadas por incidencias en servicios básicos de continuidad como la luz, el agua o el gas. Cuando entre en vigor la normativa, las empresas de estos sectores deberán informar del motivo del problema y dar un tiempo estimado para la restauración del suministro en un plazo máximo de dos horas, entre otras medidas.
+
+En cuanto a los límites al uso de contestadores automáticos con los que las empresas se relacionan con los consumidores, la nueva ley determina que la atención deberá ser personalizada, es decir, prohíbe la atención robótica, cuando el cliente así lo solicite.
+
+El texto también recoge garantías para la atención a personas vulnerables y con discapacidad, que podrán elegir el formato de comunicación con el servicio de atención a la clientela, y obliga a hacer pública la evaluación de los clientes de la atención recibida.
+
+La definición de operador, la obligación de garantizar que &quot;el 95% de las solicitudes de atención personalizadas sean atendidas&quot;, o que la Administración fomente la colaboración del Consejo de Consumidores y Usuarios y las asociaciones que lo integran con las organizaciones de empresarios y las empresas, son otras de las medidas que recoge el texto.
+
+El ministro de Consumo, Alberto Garzón -impulsor de la norma-, ha estado presente durante el debate del texto en el Pleno y ha intervenido al final del mismo para, además de agradecer la labor de los diputados que han trabajado para que el texto saliera adelante, destacar que la aprobada este jueves es la primera ley sobre este tema que se aprueba en España.
+
+Además, ha agradecido a las asociaciones de consumidores que, según ha destacado, &quot;llevan más de una década batallando para conseguir esta ley&quot; y que, tal y como ha explicado, han tenido representación este jueves en la tribuna de invitados del Congreso.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="articleSection"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <Literal>Nacional</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="datePublished"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <Literal>27.04.2023 - 17:42H</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="genre"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <Literal>Noticia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="headline"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <Literal>El Congreso aprueba la ley que limita a tres minutos la espera telefónica de un cliente y regula la atención robótica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="inLanguage"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <Literal>Español</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="version"/>
+        <NamedIndividual IRI="Noticia_5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="familyName"/>
+        <NamedIndividual IRI="Pilar_Santos"/>
+        <Literal>Santos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="givenName"/>
+        <NamedIndividual IRI="Pilar_Santos"/>
+        <Literal>Pilar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="name"/>
+        <NamedIndividual IRI="Semillas_de__CaoCao"/>
+        <Literal>Las semillas de caocao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="familyName"/>
+        <NamedIndividual IRI="Sirio_Sesenra"/>
+        <Literal>Sesenra</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="givenName"/>
+        <NamedIndividual IRI="Sirio_Sesenra"/>
+        <Literal>Sirio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="description"/>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+        <Literal>Previsión del tiempo en Valencia: lo peor de la ola de calor está por llegar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="duration"/>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+        <Literal>04:51</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="height"/>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">368</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="thumbnailUrl"/>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+        <Literal>https://www.levante-emv.com/comunitat-valenciana/2023/04/27/temperatura-subira-15-grados-habitual-86540038.html</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="width"/>
+        <NamedIndividual IRI="Video_Noticia_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">655</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="name"/>
+        <NamedIndividual IRI="20minutos"/>
+        <Literal>20 minutos</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="associatedArticle"/>
+        <ObjectProperty IRI="associatedMedia"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="comment"/>
+        <ObjectProperty IRI="discusses"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="about"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="accountablePerson"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address"/>
+        <ObjectUnionOf>
+            <Class IRI="Organization"/>
+            <Class IRI="Person"/>
+            <Class IRI="Place"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="associatedArticle"/>
+        <ObjectUnionOf>
+            <Class IRI="AudioObject"/>
+            <Class IRI="ImageObject"/>
+            <Class IRI="VideoObject"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="associatedMedia"/>
+        <Class IRI="Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="comment"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="contributor"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="copyrightHolder"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="creator"/>
+        <ObjectUnionOf>
+            <Class IRI="NewsItem"/>
+            <Class IRI="UserComment"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="discusses"/>
+        <Class IRI="UserComment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="editor"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="geoCoordinates"/>
+        <Class IRI="Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="mentions"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="provider"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sourceOrganization"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="about"/>
+        <Class IRI="Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="accountablePerson"/>
+        <Class IRI="Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address"/>
+        <Class IRI="PostalAddress"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="associatedArticle"/>
+        <Class IRI="Article"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="associatedMedia"/>
+        <ObjectUnionOf>
+            <Class IRI="AudioObject"/>
+            <Class IRI="ImageObject"/>
+            <Class IRI="VideoObject"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="comment"/>
+        <Class IRI="UserComment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="contributor"/>
+        <ObjectUnionOf>
+            <Class IRI="Organization"/>
+            <Class IRI="Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="copyrightHolder"/>
+        <ObjectUnionOf>
+            <Class IRI="Organization"/>
+            <Class IRI="Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="creator"/>
+        <ObjectUnionOf>
+            <Class IRI="Organization"/>
+            <Class IRI="Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="discusses"/>
+        <Class IRI="NewsItem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="editor"/>
+        <ObjectUnionOf>
+            <Class IRI="Organization"/>
+            <Class IRI="Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="geoCoordinates"/>
+        <Class IRI="GeoCoordinates"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="mentions"/>
+        <Class IRI="Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="provider"/>
+        <ObjectUnionOf>
+            <Class IRI="Organization"/>
+            <Class IRI="Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sourceOrganization"/>
+        <Class IRI="Organization"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="additionalName"/>
+        <Class IRI="Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="addressCountry"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="addressLocality"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="addressRegion"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="alternativeHeadline"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="articleBody"/>
+        <Class IRI="Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="articleSection"/>
+        <Class IRI="Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="box"/>
+        <Class IRI="GeoCoordinates"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="circle"/>
+        <Class IRI="GeoCoordinates"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="commentText"/>
+        <Class IRI="UserComment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="commentTime"/>
+        <Class IRI="UserComment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="copyrightNotice"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="copyrightYear"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dateCreated"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dateModified"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="datePublished"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="dateline"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="description"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="discussionUrl"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="duration"/>
+        <ObjectUnionOf>
+            <Class IRI="AudioObject"/>
+            <Class IRI="VideoObject"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="elevation"/>
+        <Class IRI="GeoCoordinates"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="email"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="encodingFormat"/>
+        <ObjectUnionOf>
+            <Class IRI="AudioObject"/>
+            <Class IRI="ImageObject"/>
+            <Class IRI="VideoObject"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="familyName"/>
+        <Class IRI="Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="faxNumber"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="featureCode"/>
+        <Class IRI="Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="genre"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="givenName"/>
+        <Class IRI="Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="headline"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="height"/>
+        <ObjectUnionOf>
+            <Class IRI="ImageObject"/>
+            <Class IRI="VideoObject"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="honorificPrefix"/>
+        <Class IRI="Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="honorificSuffix"/>
+        <Class IRI="Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="identifier"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="inLanguage"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="interactionCount"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="line"/>
+        <Class IRI="GeoCoordinates"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
+        <Class IRI="Concept"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="point"/>
+        <Class IRI="GeoCoordinates"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="polygon"/>
+        <Class IRI="GeoCoordinates"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="postOfficeBoxNumber"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="postalCode"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="printColumn"/>
+        <Class IRI="Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="printEdition"/>
+        <Class IRI="Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="printPage"/>
+        <Class IRI="Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="printSection"/>
+        <Class IRI="Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="publishingPrinciples"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="replyToUrl"/>
+        <Class IRI="UserComment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="streetAddress"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="telephone"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="thumbnailUrl"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="tickerSymbol"/>
+        <Class IRI="Organization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="transcript"/>
+        <ObjectUnionOf>
+            <Class IRI="AudioObject"/>
+            <Class IRI="VideoObject"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="url"/>
+        <Class IRI="PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="usageTerms"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="version"/>
+        <Class IRI="NewsItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="width"/>
+        <ObjectUnionOf>
+            <Class IRI="ImageObject"/>
+            <Class IRI="VideoObject"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="wordCount"/>
+        <Class IRI="Article"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="additionalName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="addressCountry"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="addressLocality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="addressRegion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="alternativeHeadline"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="articleBody"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="articleSection"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="box"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="circle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="commentText"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="rdf:XMLLiteral"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="commentTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="copyrightNotice"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="copyrightYear"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dateCreated"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dateModified"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="datePublished"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="dateline"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="discussionUrl"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="duration"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:duration"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="elevation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="encodingFormat"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="familyName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="faxNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="featureCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="genre"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="givenName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="headline"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="height"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="honorificPrefix"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="honorificSuffix"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="identifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="inLanguage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="interactionCount"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="line"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="point"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="polygon"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="postOfficeBoxNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="postalCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="printColumn"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="printEdition"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="printPage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="printSection"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="publishingPrinciples"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="replyToUrl"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="streetAddress"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="telephone"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="thumbnailUrl"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="tickerSymbol"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="transcript"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="url"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="usageTerms"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="version"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="width"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="wordCount"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Article</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>AudioObject</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Concept</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>GeoCoordinates</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>ImageObject</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Img_1_Noticia_1</IRI>
+        <Literal>https://4.bp.blogspot.com/-GFvWBFYaUyo/VLvs7CFYK7I/AAAAAAAAAdE/qKMpd1l1i5ITcntgzi8mbVubb4QhjX1LACPcB/s1600/P1010801.JPG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Img_2_Noticia_1</IRI>
+        <Literal>Es un gif por lo que lo incluyo como imagen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Img_Noticia_2</IRI>
+        <Literal>https://estaticos-cdn.prensaiberica.es/clip/6a976c54-7d15-488b-ae65-df5d8c51afb8_16-9-discover-aspect-ratio_default_0.jpg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Img_Noticia_3</IRI>
+        <Literal>https://estaticos-cdn.prensaiberica.es/clip/8457e128-f839-4e6d-bd35-95b2f06e7c0b_16-9-discover-aspect-ratio_default_0.jpg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Img_Noticia_4</IRI>
+        <Literal>https://imagenes.20minutos.es/files/image_990_v3/uploads/imagenes/2022/03/30/imagen-de-archivo-de-la-policia-italiana.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Levante_EMV</IRI>
+        <Literal>URL: https://www.levante-emv.com/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>NewsItem</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Organization</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Person</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Place</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>PostalAddress</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Semillas_de__CaoCao</IRI>
+        <Literal>URL : https://semillasdecaocao.blogspot.com/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>UserComment</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>VideoObject</IRI>
+        <Literal>http://iptc.org/std/rNews/2011-10-07#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Video_Noticia_3</IRI>
+        <Literal>https://www.levante-emv.com/comunitat-valenciana/2023/04/27/temperatura-subira-15-grados-habitual-86540038.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>about</IRI>
+        <Literal xml:lang="en">Indicates that the NewsItem is specifically about a concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>about</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>accountablePerson</IRI>
+        <Literal xml:lang="en">Specifies the person who is legally accountable for the NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>accountablePerson</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>additionalName</IRI>
+        <Literal xml:lang="en">The middle name portion of a full name for a person.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>additionalName</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>address</IRI>
+        <Literal xml:lang="en">A real-world postal address associated with this entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>address</IRI>
+        <Literal xml:lang="en">1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>addressCountry</IRI>
+        <Literal xml:lang="en">A country, part of the address. Implementors are encouraged (but not required) to use ISO 3166-1 alpha-2 country codes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>addressCountry</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>addressLocality</IRI>
+        <Literal xml:lang="en">A city/town/village etc. part of the address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>addressLocality</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>addressRegion</IRI>
+        <Literal xml:lang="en">A subdivision of a country, part of the address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>addressRegion</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>alternativeHeadline</IRI>
+        <Literal xml:lang="en">A secondary headline or title of a NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>alternativeHeadline</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>articleBody</IRI>
+        <Literal xml:lang="en">The main text of the article.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>articleBody</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>articleSection</IRI>
+        <Literal xml:lang="en">The top-level classification of the content by the publishing organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>articleSection</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>associatedArticle</IRI>
+        <Literal xml:lang="en">An Article associated with the Media Object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>associatedArticle</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>associatedMedia</IRI>
+        <Literal xml:lang="en">An  image or audio or video object associated with a NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>associatedMedia</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>box</IRI>
+        <Literal xml:lang="en">A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>box</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>circle</IRI>
+        <Literal xml:lang="en">A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>circle</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>comment</IRI>
+        <Literal xml:lang="en">Comments on this NewsItem, typically from readers/users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>comment</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>commentText</IRI>
+        <Literal xml:lang="en">The text of the comment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>commentText</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>commentTime</IRI>
+        <Literal xml:lang="en">The date and time at which the comment was left.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>commentTime</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>contributor</IRI>
+        <Literal xml:lang="en">A secondary contributor to the NewsItem, not the primary creator.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>contributor</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>copyrightHolder</IRI>
+        <Literal xml:lang="en">The entity holding the legal copyright to the NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>copyrightHolder</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>copyrightNotice</IRI>
+        <Literal xml:lang="en">Any necessary copyright notice for claiming the intellectual property for the NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>copyrightNotice</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>copyrightYear</IRI>
+        <Literal xml:lang="en">The year during which the claimed copyright was first asserted.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>copyrightYear</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>creator</IRI>
+        <Literal xml:lang="en">The author, videographer, photographer etc. (creator) of the NewsItem or Comment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>creator</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dateCreated</IRI>
+        <Literal xml:lang="en">The date (and optionally time) on which the NewsItem was created.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>dateCreated</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dateModified</IRI>
+        <Literal xml:lang="en">The date (and optionally time) on which the NewsItem was most recently modified.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>dateModified</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>datePublished</IRI>
+        <Literal xml:lang="en">The date (and optionally time) on which the NewsItem was first made available online.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>datePublished</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dateline</IRI>
+        <Literal xml:lang="en">The location where the NewsItem was produced.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>dateline</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>description</IRI>
+        <Literal xml:lang="en">A free-form textual description of the NewsItem. Publishers may find it helpful to view this as the &quot;caption&quot; for a Media object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>description</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>discusses</IRI>
+        <Literal xml:lang="en">Specifies the NewsItem associated with this Comment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>discusses</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>discussionUrl</IRI>
+        <Literal xml:lang="en">A link to the page containing the comments relating to this NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>discussionUrl</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>duration</IRI>
+        <Literal xml:lang="en">The duration of the audio or video object in ISO 8601 date format. (see also http://en.wikipedia.org/wiki/ISO_8601)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>editor</IRI>
+        <Literal xml:lang="en">Specifies the person or organization who edited the NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>editor</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>elevation</IRI>
+        <Literal xml:lang="en">The elevation is the height above sea level in meters of a specified point. An Elevation attribute must be specified in conjunction with a Point attribute.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>elevation</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>email</IRI>
+        <Literal xml:lang="en">An email address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>email</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>encodingFormat</IRI>
+        <Literal xml:lang="en">The encoding of a media asset. The encoding must be drawn from the IPTC NewsCodes for Images, Audio codecs or Video codecs available at http://cv.iptc.org/newscodes/format/, http://cv.iptc.org/newscodes/audiocodec/, and http://cv.iptc.org/newscodes/videocodec/ respectively.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>encodingFormat</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>familyName</IRI>
+        <Literal xml:lang="en">Family name. In the U.S., this is the last name of an individual.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>familyName</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>faxNumber</IRI>
+        <Literal xml:lang="en">An international fax number.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>faxNumber</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>featureCode</IRI>
+        <Literal xml:lang="en">A code indicating the type of the geographic entity specified by a location object. Implementors are encouraged (but not required) to populate this field with values drawn from the controlled vocabulary of feature codes provided by geonames.org.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>featureCode</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>genre</IRI>
+        <Literal xml:lang="en">A term describing the general editorial category of the article. Implementors are encouraged (but not required) to draw values for type of material from the IPTC Genre subject headings at http://cv.iptc.org/newscodes/genre/.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>genre</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>geoCoordinates</IRI>
+        <Literal xml:lang="en">The geo coordinates of the location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>geoCoordinates</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>givenName</IRI>
+        <Literal xml:lang="en">Given name. In the U.S., this is the first name of an individual. Also used if the individual has only one name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>givenName</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>headline</IRI>
+        <Literal xml:lang="en">The main (or only) headline or title for a NewsItem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>headline</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>height</IRI>
+        <Literal xml:lang="en">Height of the media object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>height</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>honorificPrefix</IRI>
+        <Literal xml:lang="en">An honorific prefix preceding a person&apos;s name such as Dr/Mrs/Mr.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>honorificPrefix</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>honorificSuffix</IRI>
+        <Literal xml:lang="en">An honorific suffix following a person&apos;s name such as M.D./PhD/MSCSW.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>honorificSuffix</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>identifier</IRI>
+        <Literal xml:lang="en">An identifier for a NewsItem. This ID can be generated by the underlying publishing system. No two distinct NewsItems from the same site should be assigned the same id, but a single NewsItem may have multiple ids.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>identifier</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>inLanguage</IRI>
+        <Literal xml:lang="en">A language used by the news content specified according to IETF BCP 47 at http://tools.ietf.org/html/bcp47.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>inLanguage</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>interactionCount</IRI>
+        <Literal xml:lang="en">A count of a specific user interactions with this item - for example, 20 UserLikes, 5 UserComments, or 300 UserDownloads. Implementors are encouraged (but not required) to use the interaction type from the controlled vocabulary provided by schema.org at: http://schema.org/UserInteraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>interactionCount</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>line</IRI>
+        <Literal xml:lang="en">A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>line</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>mentions</IRI>
+        <Literal xml:lang="en">Indicates that the NewsItem contains a reference to, but is not necessarily about a concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>mentions</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>name</IRI>
+        <Literal xml:lang="en">The natural language name for a concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>name</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>point</IRI>
+        <Literal xml:lang="en">A point is a physical location on Earth. A point is expressed as a latitude and longitude separated by a space character.  Points should be expressed in decimal as laid out in the WGS84 specification (see also http://en.wikipedia.org/wiki/World_Geodetic_System).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>point</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>polygon</IRI>
+        <Literal xml:lang="en">A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space-delimited points where the first and final points are identical.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>polygon</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>postOfficeBoxNumber</IRI>
+        <Literal xml:lang="en">A post office box associated with this postal address [optional].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>postOfficeBoxNumber</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>postalCode</IRI>
+        <Literal xml:lang="en">A postal code, part of the address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>postalCode</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>printColumn</IRI>
+        <Literal xml:lang="en">The number of the column in which the article appears in the print edition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>printColumn</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>printEdition</IRI>
+        <Literal xml:lang="en">The edition of the print product in which the article appears. Implementors wishing to link to their own controlled vocabularies for this property may wish to specify this property as a URI.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>printEdition</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>printPage</IRI>
+        <Literal xml:lang="en">If this article appears in print, this property indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. &quot;A5&quot;, &quot;B18&quot;).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>printPage</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>printSection</IRI>
+        <Literal xml:lang="en">If this article appears in print, this property indicates the print section in which the article appeared. Implementors wishing to link to their own controlled vocabularies for this property may wish to specify this property as a URI.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>printSection</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>provider</IRI>
+        <Literal xml:lang="en">Specifies the person or organization that distributed the NewsItem.  </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>provider</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>publishingPrinciples</IRI>
+        <Literal xml:lang="en">Link to page describing the editorial principles of the organization primarily responsible for the creation or publication of the NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>publishingPrinciples</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>replyToUrl</IRI>
+        <Literal xml:lang="en">The URL at which a reply may be posted to the specified comment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>replyToUrl</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>sourceOrganization</IRI>
+        <Literal xml:lang="en">The organization on whose behalf the creator was working.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>sourceOrganization</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>streetAddress</IRI>
+        <Literal xml:lang="en">A line of address information, in the format expected by a recipient postal service. City, country area, country and postal code are expressed separately.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>streetAddress</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>telephone</IRI>
+        <Literal xml:lang="en">An international phone number.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>telephone</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>thumbnailUrl</IRI>
+        <Literal xml:lang="en">A thumbnail image relevant to the content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>thumbnailUrl</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tickerSymbol</IRI>
+        <Literal xml:lang="en">The exchange traded instrument associated with an Organization object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. The IPTC suggests (but does not require) that implementors of rNews select the value for the exchange component of the tickerSymbol attribute from the controlled vocabulary of Market Identifier Codes (MIC) specified in ISO 15022.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>tickerSymbol</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>transcript</IRI>
+        <Literal xml:lang="en">The transcript of this Video or Audio object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>transcript</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>url</IRI>
+        <Literal xml:lang="en">A reference to a web resource as part of an address, often the homepage of an individual or organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>url</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>usageTerms</IRI>
+        <Literal xml:lang="en">A human- or machine-readable statement about the usage terms pertaining to the NewsItem. Implementors can use this property to link to IPTC RightsML (or other Rights Expression Language) resources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>usageTerms</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>version</IRI>
+        <Literal xml:lang="en">The version of the NewsItem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>version</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>width</IRI>
+        <Literal xml:lang="en">Width of the media object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>width</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>wordCount</IRI>
+        <Literal xml:lang="en">The number of words in the article.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>wordCount</IRI>
+        <Literal>1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>20minutos</IRI>
+        <Literal>URL: https://www.20minutos.es/</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
